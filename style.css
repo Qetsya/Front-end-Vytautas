@@ -1,0 +1,54 @@
+html,
+body,
+main {
+    height: 100%;
+    background-color: gray;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 960px;
+    margin: 40px auto 0 auto;
+}
+ p {
+    margin: 0;
+ }
+
+ h3 {
+    margin: 0;
+ }
+
+.card {
+    max-width: 500px;
+    background-color: white;
+    padding: 40px 30px;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(74, 183, 255);
+}
