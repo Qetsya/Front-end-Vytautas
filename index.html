@@ -11,29 +11,41 @@
 </head>
 
 <body>
-    <main>
-        <div class="card">
-            <div class="card-img">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfUjLhnCMTXpmeTrQf0kVcG580i7FXmqu7A&usqp=CAU"
-                    alt="face">
-            </div>
-            <div class="card-info">
-                <h3>Vardas Pavarde</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur et est dolor nihil mollitia,
-                    vitae quos voluptates!</p>
-
-                <div class="stats">
-                    <p>300 Following</p>
-                    <p>4000 Followers</p>
+    <main class="container">
+        <form action="index.html">
+            <div class="form-layout">
+                <h3>Pirkėjo informacija</h3>
+                <div class="input-list">
+                    <div class="input-group">
+                        <label for="name" class="form-label">Vardas</label>
+                        <input type="text" id="name" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="pavarde" class="form-label">Pavarde</label>
+                        <input type="text" id="pavarde" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="gatve" class="form-label">Gatve</label>
+                        <input type="text" id="gatve" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="mietas" class="form-label">Miestas</label>
+                        <input type="text" id="miestas" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="namas" class="form-label">Namo nr</label>
+                        <input type="number" id="namas" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="kodas" class="form-label">Pasto kodas</label>
+                        <input type="number" id="kodas" class="form-input">
+                    </div>
                 </div>
-
-                <div>
-                    <a href="#">3 something</a>
-                </div>
+                <button class="input-button" type="submit">Saugoti</button>
+                <button class="input-button reset button" type="button" type="reset">Valyti</button>
             </div>
-        </div>
-
-    </main>
+        </form>
+</main>
 </body>
 
 </html>
