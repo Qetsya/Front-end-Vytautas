@@ -1,63 +1,162 @@
-.header {
-    background-color: lightblue;
-    height: 100px;
+* {
+    box-sizing: border-box;
 }
-.content {
-    background-color: lightgray;
-    height: 250px;
-}
-.sign-up {
-    background-color: lightgreen;
-}
-.wrapper div:not(:first-child) {
-    height: 100px;
-}
-.feature1 {
-background-color: orange;
-}
-.feature2 {
-background-color: pink;
-}
-.feature3 {
-background-color: plum;
+body {
+    margin: 0;
+    background-color: brown;
 }
 
-@media only screen and (min-width: 678px) {
-    .wrapper {
+header,
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+header img {
+    width: 181px;
+    padding-top: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    background-color: white;
+    min-width: 181px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.mini-login,
+.mini-submit {
+    padding: 10px;
+    border: none;
+    border-radius: 25px 25px 25px 25px;
+    max-width: 200px;
+    width: 100px;
+}
+
+.mini-login {
+    background-color:rgb(250, 71, 101) ;
+    color: white;
+}
+
+.mini-submit {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.submit {
+    background-color: rgb(250, 71, 101);
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 20px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.container input {
+    border: none;
+    background-color: rgb(240, 238, 238);
+    border-bottom: 1px solid rgb(255, 62, 94);
+    padding: 10px;
+}
+
+::placeholder {
+    color: black;
+}
+
+div p {
+    text-align: center;
+}
+
+form > div {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container {
+    padding: 20px 0 40px 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+form div h2 {
+    display: none;
+}
+
+.image {
+    display: none;
+}
+
+.image img{
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (min-width: 960px) {
+    form {
+        min-width: 960px;
+        margin: 0 auto;
+    }
+
+    form div h2 {
+        display: block;
+    }
+
+    .form-container {
         display: flex;
-        flex-wrap: wrap;
+        gap: 20px;
     }
-    .wrapper > *:not(.content) {
-        flex-basis: 50%;
-    }
-    .content {
-        flex-basis: 100%;
-    }
-}
 
-@media only screen and (min-width: 1200px) {
-    .content,
-    .sign-up {
-        flex-basis: 100% !important;
+    header img{
+        margin-left: 0;
     }
-    .feature1,
-    .feature2,
-    .feature3 {
-        flex-basis: calc(100% / 3) !important;
+    
+    .links {
+        flex-direction: column;
     }
-    .feature1 {
-        order: 1;
+
+    .or {
+        display: flex;
+        align-items: center;
     }
-    .feature2 {
-        order: 3;
+
+    .image {
+        display: block;
+        width: 100%;
     }
-    .feature3 {
-        order: 2;
+
+    .form-container {
+        padding-bottom: 80px;
     }
-    .sign-up {
-        order: 4;
-    }
-    .content {
-        order: 5;
-    }
+
 }
