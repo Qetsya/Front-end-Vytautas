@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logoipsum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,25 +22,25 @@
     </header>
 
     <main>
-        <form action="index.html">
+        <div class="container">
 
             <div>
                 <h2>Your journey begins here.</h2>
             </div>
 
             <div class="form-container">
-                <div class="container">
+                <form>
                     <div class="top-buttons">
-                        <button type="submit" class="mini-login">Login</button>
-                        <button type="submit" class="mini-submit">Submit</button>
+                        <button type="submit" class="button-small mini-login">Login</button>
+                        <button type="submit" class="button-small mini-submit">Submit</button>
                     </div>
-                    <input type="text" id="username" name="username" placeholder="Enter email or username">
-                    <input type="password" id="psw" name="password" placeholder="Enter password">
+                    <input type="text" class="input" name="username" placeholder="Enter email or username">
+                    <input type="password" class="input" name="password" placeholder="Enter password">
 
                     <a href="#">Forgot password?</a>
 
-                    <button type="submit" class="submit">LOG IN</button>
-                </div>
+                    <button type="submit" class="submit">log in</button>
+                </form>
 
                 <div class="or">
                     <p>OR</p>
@@ -63,7 +67,7 @@
                 </div>
             </div>
 
-        </form>
+        </div>
     </main>
 
 
