@@ -1,93 +1,129 @@
 * {
     box-sizing: border-box;
 }
+
 body {
-    margin: 0;
-    background-color: brown;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(181.29deg, #050505 25.32%, #770019 96.27%);
 }
 
 header,
 main {
-    max-width: 90%;
-    margin: 0 auto;
+    margin: 0 40px;
 }
 
 header img {
     width: 181px;
-    padding-top: 60px;
+    padding-top: 40px;
     display: block;
     margin: 0 auto;
 }
 
-form {
+.container {
     background-color: white;
-    min-width: 181px;
-    margin: 0 auto;
-    border-radius: 20px;
+    min-height: 533px;
+    border-radius: 40px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 58px 54px 54px 54px;
 }
 
-.mini-login,
-.mini-submit {
-    padding: 10px;
+button {
+    text-transform: uppercase;
+}
+
+.button-small {
+    font-size: 10px;
+    line-height: 120%;
     border: none;
-    border-radius: 25px 25px 25px 25px;
-    max-width: 200px;
+    border-radius: 40px;
+    min-width: 60px;
     width: 100px;
+    padding: 10px 0;
 }
 
 .mini-login {
-    background-color:rgb(250, 71, 101) ;
+    background-color:#FF0036;
     color: white;
+    box-shadow: 0 3px 5px rgba(255,0,54,0.2);
 }
 
 .mini-submit {
     background-color: white;
-    color: black;
-    border: 1px solid black;
+    color: #050505;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.top-buttons .button-small {
+    flex-grow: 1;
+}
+
+.button-small:hover {
+    opacity: 0.8;
 }
 
 .submit {
-    background-color: rgb(250, 71, 101);
+    background-color: #FF0036;
+    color:white;
     padding: 10px;
     border-radius: 30px;
     border: none;
     margin-top: 20px;
 }
 
-.top-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+.submit:hover {
+    
 }
 
-.container input {
-    border: none;
-    background-color: rgb(240, 238, 238);
-    border-bottom: 1px solid rgb(255, 62, 94);
-    padding: 10px;
+.input {
+background: linear-gradient(180deg, rgba(5, 5, 5, 0.04) 0%, rgba(5, 5, 5, 0) 100%);
+border: 0;
+border-bottom: 1px solid #FF0036;
+font-size: 12px;
+padding: 16px 10px;
+line-height: 120%;
 }
 
-::placeholder {
+.input:focus {
+    outline: 0;
+    background: linear-gradient(180deg,
+    rgba(5, 5, 5, 0.08) 0%,
+    rgba(5, 5, 5, 0.04) 100%);
+}
+
+.input::placeholder {
     color: black;
+    opacity: 1;
 }
 
 div p {
     text-align: center;
 }
 
-form > div {
-    max-width: 70%;
+form a {
+    text-align: right;
+    color: #FF0036;
+    font-size: 10px;
+    line-height: 120%;
+
+}
+
+.container > div {
     margin: 0 auto;
 }
 
-.container {
+form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.form-container {
-    padding: 20px 0 40px 0;
+    row-gap: 10px;
 }
 
 .links {
@@ -100,7 +136,7 @@ form > div {
     border-radius: 50%;
 }
 
-form div h2 {
+.container div h2 {
     display: none;
 }
 
@@ -123,12 +159,12 @@ form div h2 {
 }
 
 @media only screen and (min-width: 960px) {
-    form {
+    .container {
         min-width: 960px;
         margin: 0 auto;
     }
 
-    form div h2 {
+    .container div h2 {
         display: block;
     }
 
