@@ -4,12 +4,13 @@
 
 html,
 body {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .wrapper {
     min-width: 769px;
-    max-width: 960px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -18,7 +19,7 @@ header {
 }
 
 nav {
-    width: 100%;
+    max-width: 1366px;
     height: 60px;
     position: sticky;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -28,8 +29,8 @@ nav {
 }
 
 nav img {
-    width: 130px;
-    height: 30px;
+    max-width: 130px;
+    max-height: 30px;
     margin-left: 40px;
     align-self: center;
 }
@@ -37,15 +38,15 @@ nav img {
 header ul{
     display: flex;
     gap: 60px;
-    max-width: 50%;
-    padding: 0;
+    width: 50%;
+    padding: 0 0 0 30px;
 }
 
 header ul li {
     text-transform: uppercase;
     list-style: none;
     align-self: center;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 115%;
 }
 
@@ -65,9 +66,11 @@ header ul li a{
     height: 100%;
 }
 
-.hero-content > div {
-    flex: 1;
+.hero-img {
+    flex-basis: 50%;
 }
+
+
 
 .hero-img img {
     object-fit: cover;
@@ -77,25 +80,103 @@ header ul li a{
 
 .hero-text {
     align-self: center;
-    margin-left: 91px;
+    padding-left: 90px;
+    flex-basis: 50%;
 }
 
 .hero-text p {
     color: white;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 115%;
+    max-width: 80%;
     margin: 0;
 }
 
 .hero-text button {
     border: none;
     background-color: #BF5B5B;
-    width: 215px;
-    height: 80px;
+    max-width: 215px;
+    max-height: 80px;
     text-transform: uppercase;
     color: white;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 115%;
+    padding: 24px 34px;
+    margin-top: 10px
 }
+
+
+.top-section {
+    background-color: #BF5B5B;
+}
+
+.top-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-content .section-item {
+    flex-basis: 50%;
+    display: flex;
+    width: 50%;
+}
+
+.top-content .section-item > * {
+    align-self: center;
+}
+
+.top-content .section-item p {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 115%;
+    margin: 0 20px;
+}
+
+.top-content .section-item img, 
+.top-content .section-item p {
+    flex: 1;
+}
+
+.top-content .section-item:last-child p,
+.top-content .section-item:first-child p
+{
+    flex: 2;
+}
+
+.top-content .section-item .white-background {
+    background-color: white;
+    height: 100%;
+    color: black;
+}
+
+.top-content .section-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-content .section-item div {
+    flex: 1;
+}
+
+.top-content .section-item div img {
+    object-fit: cover;
+}
+
+.section-item {
+    height: 240px;
+}
+
+.another-section {
+    height: 500px;
+    background-color: antiquewhite;
+}
+
+
+
+
+
+
