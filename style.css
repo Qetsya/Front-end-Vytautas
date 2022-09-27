@@ -19,7 +19,7 @@ header {
 }
 
 nav {
-    max-width: 1366px;
+    /* max-width: 1366px; */
     height: 60px;
     position: sticky;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -151,7 +151,14 @@ header ul li a{
     color: #394149;
 }
 
-.section-item p,
+.bottom-section .section-item .grey-content p {
+    color: white;
+}
+
+.top-content .section-item .white-content p {
+    color: black;
+}
+
 .section-item p {
     text-align: center;
     font-weight: 500;
@@ -160,26 +167,20 @@ header ul li a{
     margin: 0 20px;
 }
 
-.top-content .section-item .white-content p {
-    color: black;
-}
-
-.top-content .section-item div {
+.section-item div {
     flex-basis: calc(100% / 3);
 }
 
-.top-content .section-item .grey-content,
-.top-content .section-item .white-content
-{
+.section-item .wide-content {
     flex-basis: calc((100% / 3) * 2);
 }
 
-.top-content .section-item div {
+.section-item div {
     width: 100%;
     height: 100%;
 }
 
-.top-content .section-item div img {
+.section-item div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -191,10 +192,43 @@ header ul li a{
     object-fit: contain;
 }
 
-.bottom-content {
-    height: 500px;
+.bottom-content .section-item .cover-image-big {
+    background-color: #394149;
 }
 
+.bottom-content .section-item .cover-image-big img {
+    height: 70%;
+    object-fit: contain;
+}
+
+.bottom-content .section-item .cover-image img {
+    height: 40px;
+    object-fit: contain;
+}
+
+footer {
+    background-color: #394149;
+    text-align: center;
+    padding: 50px 0 20px 0;
+}
+
+footer img {
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 115%;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
 
 
 
