@@ -37,7 +37,7 @@ nav img {
 
 header ul{
     display: flex;
-    gap: 60px;
+    gap: 40px;
     width: 50%;
     padding: 0 0 0 30px;
 }
@@ -69,8 +69,6 @@ header ul li a{
 .hero-img {
     flex-basis: 50%;
 }
-
-
 
 .hero-img img {
     object-fit: cover;
@@ -119,12 +117,23 @@ header ul li a{
 
 .top-content .section-item {
     flex-basis: 50%;
+    height: 200px;
     display: flex;
-    width: 50%;
 }
 
-.top-content .section-item > * {
-    align-self: center;
+.top-content .section-item div {
+    display: flex;
+    align-items: center;
+}
+
+.top-content .section-item .grey-content {
+    background-color: #394149;
+    height: 100%;
+}
+
+.top-content .section-item .white-content {
+    background-color: white;
+    height: 100%;
 }
 
 .top-content .section-item p {
@@ -136,39 +145,37 @@ header ul li a{
     margin: 0 20px;
 }
 
-.top-content .section-item img, 
-.top-content .section-item p {
-    flex: 1;
-}
-
-.top-content .section-item:last-child p,
-.top-content .section-item:first-child p
-{
-    flex: 2;
-}
-
-.top-content .section-item .white-background {
-    background-color: white;
-    height: 100%;
+.top-content .section-item .white-content p {
     color: black;
 }
 
-.top-content .section-item img {
+.top-content .section-item div {
+    flex-basis: calc(100% / 3);
+}
+
+.top-content .section-item .grey-content,
+.top-content .section-item .white-content
+{
+    flex-basis: calc((100% / 3) * 2);
+}
+
+.top-content .section-item div {
+    width: 100%;
+    height: 100%;
+}
+
+.top-content .section-item div img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.top-content .section-item div {
-    flex: 1;
+
+.top-content .section-item .cover-image {
+    max-height: 80px;
+    object-fit: contain;
 }
 
-.top-content .section-item div img {
-    object-fit: cover;
-}
-
-.section-item {
-    height: 240px;
-}
 
 .another-section {
     height: 500px;
