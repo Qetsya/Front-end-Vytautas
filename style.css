@@ -110,23 +110,30 @@ header ul li a{
     background-color: #BF5B5B;
 }
 
-.top-content {
+.bottom-section {
+    background-color:#3CABA4;
+}
+
+.top-content,
+.bottom-content {
     display: flex;
     flex-wrap: wrap;
 }
 
-.top-content .section-item {
+.top-content .section-item,
+.bottom-content .section-item {
     flex-basis: 50%;
     height: 200px;
     display: flex;
 }
 
-.top-content .section-item div {
+.top-content .section-item div,
+.bottom-content .section-item div {
     display: flex;
     align-items: center;
 }
 
-.top-content .section-item .grey-content {
+.section-item .grey-content {
     background-color: #394149;
     height: 100%;
 }
@@ -138,6 +145,14 @@ header ul li a{
 
 .top-content .section-item p {
     color: white;
+}
+
+.bottom-content .section-item p {
+    color: #394149;
+}
+
+.section-item p,
+.section-item p {
     text-align: center;
     font-weight: 500;
     font-size: 16px;
@@ -176,10 +191,8 @@ header ul li a{
     object-fit: contain;
 }
 
-
-.another-section {
+.bottom-content {
     height: 500px;
-    background-color: antiquewhite;
 }
 
 
