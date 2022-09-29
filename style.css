@@ -1,236 +1,52 @@
-* {
-    box-sizing: border-box;
+/* .ca-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.ca-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
 
 html,
 body {
     min-height: 100vh;
+}
+
+.ca-grid {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto min(100%, 960px) auto;
+    grid-template-rows: 100px auto 200px;
+    grid-template-areas:
+        ". header ."
+        ". main ."
+        ". footer .";
+}
+
+.ca-grid-header {
+    grid-area: header;
+    background-color: brown;
+}
+
+.ca-grid-main {
+    /* grid child rules */
+    grid-area: main;
+    /* another grid container rules */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ca-grid-footer {
+    grid-area: footer;
+    background-color: brown;
+}
+
+.ca-grid img {
     width: 100%;
-}
-
-.wrapper {
-    min-width: 769px;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-header {
-    background-color: #BF5B5B;
-}
-
-nav {
-    /* max-width: 1366px; */
-    height: 60px;
-    position: sticky;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav img {
-    max-width: 130px;
-    max-height: 30px;
-    margin-left: 40px;
-    align-self: center;
-}
-
-header ul{
-    display: flex;
-    gap: 40px;
-    width: 50%;
-    padding: 0 0 0 30px;
-}
-
-header ul li {
-    text-transform: uppercase;
-    list-style: none;
-    align-self: center;
-    font-size: 12px;
-    line-height: 115%;
-}
-
-header ul li a{
-    color: white;
-    text-decoration-line: underline;
-    font-weight: 800;
-}
-
-.hero {
-    background-color: #394149;
-    height: 50vh;
-}
-
-.hero-content {
-    display: flex;
-    height: 100%;
-}
-
-.hero-img {
-    flex-basis: 50%;
-}
-
-.hero-img img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-text {
-    align-self: center;
-    padding-left: 90px;
-    flex-basis: 50%;
-}
-
-.hero-text p {
-    color: white;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 115%;
-    max-width: 80%;
-    margin: 0;
-}
-
-.hero-text button {
-    border: none;
-    background-color: #BF5B5B;
-    max-width: 215px;
-    max-height: 80px;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 115%;
-    padding: 24px 34px;
-    margin-top: 10px
-}
-
-
-.top-section {
-    background-color: #BF5B5B;
-}
-
-.bottom-section {
-    background-color:#3CABA4;
-}
-
-.top-content,
-.bottom-content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.top-content .section-item,
-.bottom-content .section-item {
-    flex-basis: 50%;
-    height: 200px;
-    display: flex;
-}
-
-.top-content .section-item div,
-.bottom-content .section-item div {
-    display: flex;
-    align-items: center;
-}
-
-.section-item .grey-content {
-    background-color: #394149;
-    height: 100%;
-}
-
-.top-content .section-item .white-content {
-    background-color: white;
-    height: 100%;
-}
-
-.top-content .section-item p {
-    color: white;
-}
-
-.bottom-content .section-item p {
-    color: #394149;
-}
-
-.bottom-section .section-item .grey-content p {
-    color: white;
-}
-
-.top-content .section-item .white-content p {
-    color: black;
-}
-
-.section-item p {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 115%;
-    margin: 0 20px;
-}
-
-.section-item div {
-    flex-basis: calc(100% / 3);
-}
-
-.section-item .wide-content {
-    flex-basis: calc((100% / 3) * 2);
-}
-
-.section-item div {
-    width: 100%;
-    height: 100%;
-}
-
-.section-item div img {
-    width: 100%;
-    height: 100%;
+    height: 100px;
     object-fit: cover;
 }
-
-
-.top-content .section-item .cover-image {
-    max-height: 80px;
-    object-fit: contain;
-}
-
-.bottom-content .section-item .cover-image-big {
-    background-color: #394149;
-}
-
-.bottom-content .section-item .cover-image-big img {
-    height: 70%;
-    object-fit: contain;
-}
-
-.bottom-content .section-item .cover-image img {
-    height: 40px;
-    object-fit: contain;
-}
-
-footer {
-    background-color: #394149;
-    text-align: center;
-    padding: 50px 0 20px 0;
-}
-
-footer img {
-    height: 30px;
-    margin-bottom: 15px;
-}
-
-footer p {
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 115%;
-}
-
-footer .social-links {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-
-
-
-
