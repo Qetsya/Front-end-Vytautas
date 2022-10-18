@@ -202,19 +202,95 @@ hr {
 .h-content {
     grid-area: h-content;
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 230px;
     
     gap: 30px;
     margin-left: 44px;
-    width: calc(100% - 94px);
+    margin-right: 44px;
+    padding-bottom: 20px;
+    /* width: calc(100% - 88px); */
+
+    overflow-y: auto;
 }
 
 .h-content__card {
-    border-radius: 10px;
+    border-radius: 18px;
     background-color: white;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
 }
 
+.new-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E6E6E6;
+    height: 100%;
+    border-radius: 18px;
+}
+
+.plus {
+    width: 40px;
+    background-color: #E8EEFE;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.h-content__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    margin-top: 26px;
+}
+
+.templates {
+    text-decoration: underline;
+    color: grey;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 110%;
+    margin-top: 10px;
+}
+
+.quizzes {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-backround {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card-photo {
+    width: 224px;
+    height: 94px;
+    object-fit: cover;
+}
+
+.dots {
+    width: 18px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-content__card:not(:first-child) .h-content__title {
+    color: white;
+}
 
 
 
