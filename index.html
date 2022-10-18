@@ -46,29 +46,42 @@
         </aside>
 
         <header class="header">
-            <nav class="header-navigation">
-                <h3 class="header-label">Library</h3>
-                <div class="header-navigation__links-list">
-                    <a href="#" class="header-navigation__links">Courses</a>
-                    <a href="#" class="header-navigation__links">Quizzes</a>
-                    <a href="#" class="header-navigation__links">Questions</a>
-                    <a href="#" class="header-navigation__links">Resources</a>
+            <div class="header-top">
+                <div class="header-navigation">
+                    <h3 class="header-label">Library</h3>
+                    <nav class="header-navigation__links-list">
+                        <a href="#" class="header-navigation__links header-navigation__links--active">Courses</a>
+                        <a href="#" class="header-navigation__links">Quizzes</a>
+                        <a href="#" class="header-navigation__links">Questions</a>
+                        <a href="#" class="header-navigation__links">Resources</a>
+                    </nav>
                 </div>
-            </nav>
+
+                <button type="button" class="header-navigation__button"><span class="icon-plus"></span>Topic</button>
+            </div>
 
             <hr>
 
             <div class="header-search">
-                <a href="#">
-                    <div class="header-search__logo">search</div>
-                    <span>Search</span>
-                </a>
+                <button type="button" class="header-search__button">
+                    <span class="header-search__logo"></span>Search</button>
+
+                <button type="button" class="header-view__button"><span class="burger-icon"></span>View Table</button>
             </div>
         </header>
 
         <section class="h-content">
-            <div>yes</div>
-            <div></div>
+            <div class="h-content__card">yes</div>
+            <div class="h-content__card">
+                <img src="" alt="">
+                <p>Medical Compliance Tips and Tricks</p>
+                <div>
+                    <span>8 Quizzes</span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="h-content__card">yes</div>
+            <div class="h-content__card">no</div>
         </section>
 
     </main>
