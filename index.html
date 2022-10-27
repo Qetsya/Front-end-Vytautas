@@ -1,109 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid task</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <main class="layout">
-        <aside class="navigation">
-            <div class="navigation__logo">
-                <img class="navigation-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/62/Tesla_Motors_Logo.svg" alt="tesla-logo">
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary bg-opacity-10">
+      <div class="container-md">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-md">
+      <div class="card my-4">
+        <div class="card-body">
+          <h1 class="text-center text-lg-start">Prisijungti</h1>
+          <div class="row">
+            <div class="col-lg-6">
+                <form>
+                  <div class="mb-3 row">
+                <label for="emailInput" class="form-label">Email</label>
+                
+                  <input type="email" class="form-control" id="emailInput" placeholder="vardenis@pastas.lt">
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="passwordInput" class="fomr-label">Slaptazodis</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="*******" minlength="8" required>
+                    <p class="form-text">Slaptazodis .........</p>
+                  </div>
+              </form>
             </div>
-            <div class="navigation__links-container">
-                <div class="navigation__links-list">
-                    <a href="#" class="navigation__links"><img src="assets/icons/Vector.png" alt="vector">Reports</a>
-                    <a href="#" class="navigation__links link--active"><img src="assets/icons/Path.png"
-                            alt="path">Library</a>
-                    <a href="#" class="navigation__links"><img src="assets/icons/group.png" alt="group">People</a>
-                    <a href="#" class="navigation__links"><img src="assets/icons/Vector2.png"
-                            alt="vector2">Activities</a>
-                </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <div class="navigation__links-list">
-                    <h5>Support</h5>
-                    <a href="#" class="navigation__links"><img src="assets/icons/Vector3.png" alt="vector3">Get
-                        Started</a>
-                    <a href="#" class="navigation__links"><img src="assets/icons/Vector4.png" alt="vector4">Settings</a>
-                </div>
-            </div>
-            <div class="burger-menu"></div>
+    <!-- <div class="row">
+      <div class="col-6 col-sm-3 col-md-4 col-lg-2 bg-primary">1 of 4</div>
+      <div class="col-6 col-sm-3 col-md-4 col-lg-2 bg-secondary">2 of 4</div>
+      <div class="col-6 col-sm-3 col-md-4 col-lg-2 bg-secondary">3 of 4</div>
+      <div class="col-6 col-sm-3 col-md-4 col-lg-2 bg-secondary">4 of 4</div>
+    </div> -->
 
-            <div class="navigation__account">
-                <hr>
-                <img src="assets/images/Photo.png" alt="photo">
-                <h5>Sam Wheeler</h5>
-                <span>samwheeler@gmail.com</span>
-            </div>
 
-        </aside>
 
-        <header class="header">
-            <div class="header-top">
-                <div class="header-navigation">
-                    <h3 class="header-label">Library</h3>
-                    <nav class="header-navigation__links-list">
-                        <a href="#" class="header-navigation__links header-navigation__links--active">Courses</a>
-                        <a href="#" class="header-navigation__links">Quizzes</a>
-                        <a href="#" class="header-navigation__links">Questions</a>
-                        <a href="#" class="header-navigation__links">Resources</a>
-                    </nav>
-                </div>
 
-                <button type="button" class="header-navigation__button"><span class="icon-plus"></span>Topic</button>
-            </div>
 
-            <hr>
 
-            <div class="header-search">
-                <button type="button" class="header-search__button">
-                    <span class="header-search__logo"></span>Search</button>
-
-                <button type="button" class="header-view__button"><span class="burger-icon"></span>View Table</button>
-            </div>
-        </header>
-
-        <section class="h-content">
-
-            <a href="#" class="h-content__card new-card">
-                <img class="plus" src="assets/icons/plus-solid.svg" alt="plus">
-                <h2 class="h-content__title">Create Courses</h2>
-                <span class="templates">View Templates</span>
-            </a>
-
-            <a href="#" class="h-content__card">
-
-                <img class="card-photo" src="assets/images/cta-cover.png" alt="cover-img">
-                <img class="card-backround" src="assets/images/cta-cover.png" alt="cover-img">
-                <h2 class="h-content__title">Medical Compliance Tips and Tricks</h2>
-
-                <div class="card-footer">
-                    <span class="quizzes">8 Quizzes</span>
-                    <img class="dots" src="assets/icons/ellipsis-solid.svg" alt="dots">
-                </div>
-            </a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-            <a href="#" class="h-content__card"></a>
-
-        </section>
-
-    </main>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
 </html>
