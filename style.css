@@ -1,10 +1,7 @@
-* {
-    box-sizing: border-box;
+.test-h-500 {
+    height: 500px;
 }
 
-html,
-body {
-    height: 100%;
-    margin: 0;
+.test-img-fit {
+    object-fit: cover;
 }
-
