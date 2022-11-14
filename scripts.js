@@ -1,28 +1,20 @@
-// console.log("Hello world")
-// console.error("oj")
-// // alert("Sveiki!")
+// let svoris = prompt("koks jusu svoris? (kg)");
+// // let svorisKg = Number(svoris);
 
-// // text is variable. gali buti kiti zodziai
-// // let nerasomas, kai deklaravimas jau sukurtas
-// let text1 = "Hello world";
-// console.log(text);
+// // console.log(svorisKg, typeof svorisKg)
 
-// let text = "Hello world"; //naujas kintamasis
-// text = "Hello class"; //senas kintamasis, bet pakeiciama o reiksme
-
-// let tekstasA; // naujas kintamasis (deklaruojamas) // undefined
-// let tekstasB = "Hello world";
-
-// console.log(tekstasA); //undefined
-// console.log(tekstasB); //Hello world
+let svoris = prompt("koks jusu svoris? (kg)");
+let svorisKg = Number(svoris);
 
 
-let pirmasSkaicius = 123456789;
-let antrasSkaicius = 5;
-let rezultatas = pirmasSkaicius + antrasSkaicius;
+let ugisCm = Number(ugis);
+let ugis = prompt('koks jusu ugis? (cm)');
 
-console.log(rezultatas);
-antrasSkaicius = 0
-console.log(pirmasSkaicius + antrasSkaicius);
-antrasSkaicius = undefined;
-console.log(pirmasSkaicius + antrasSkaicius);
+let ugisCmKv = ugisCm**2;
+
+const daugiklis = 10_000;
+
+const bmi = svorisKg / ugisCmKv * daugiklis; 
+
+console.log(bmi);
+alert(`jusu BMI yra ${bmi}`);
