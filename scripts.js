@@ -1,89 +1,203 @@
-console.log(Number("  123  ")); //123
-console.log(Number(""));  //0
-console.log(Number("a"));  //NaN
+// let i = 0;
+// i += 3;
+// console.log("pirmas", i); //1
 
-console.log(Boolean("")); //false
-console.log(Boolean("0")); //false
+// i++; //prideda 1
+// console.log("antras", i);
 
-console.log(Boolean("a")); //true
-console.log(Boolean("1"));  //true
-console.log(Boolean("-1"));  //true
+// ++i;
+// console.log("tracias", i);
 
-console.log(Number(true));  //1
-console.log(Number(false));  //0
+// //--------------------------------------------
 
+// let y = 0;
+// y += 1;
+// console.log(y++); // 0 // 1. console.log; 2. y+= 1; // 1
+// console.log(y); // 2
+// console.log(++y); // 2 // 1. y += 1; 2. console.log; //2
 
-//operatoriai: /, *, +, -, ** (kelt laipsniu), % (modulis), 
+// /*
+// 1. >
+// 2. <
+// 3. >=
+// 4. <=
+// 5. ==
+// 6. ==
+// 7. !=
+// 8. !==
+// */
 
-console.log(4 ** 2); //16
-console.log(4 ** (1 / 2)); //2 - istraukia sakni
+// const x = "asd";
+// const y = "as";
+// console.log(x.length > y.length);
 
-console.log(7 / 2); //3.5
-console.log(7 % 2); //1 - nedalus skaicius, matematine liekana, padalinus is 2.
-console.log(2 % 7); // 2
+// const metai = prompt("Kokie dabar metai?");
+// if (metai === "2022") {
+//     alert("Tu teisus!");
+// } else if (Number(metai) < 2000) {
+//     alert("Visiskai nepataikei!");
+// } else {
+//     alert("Tu neteisus!");
+// }
 
+//TASK with if
 
-let pirmasZodis = 'Vardenis';
-let antrasZodis = 'Pavardenis';
+// const color = prompt("Kokia spalva? (red, yello, blue)");
+// const model = prompt("Koks modelis? (Irasykite metus");
+// const make = prompt("Kokia marke? (Ferrari etc)");
+// const mileage = prompt("Kokia rida? (Kiek km nuvaziuota)");
 
-let pilnaFraze = `${pirmasZodis} ${antrasZodis}`; //String template
-let kitaFraze = pirmasZodis + ' ' + antrasZodis; //Vardenis Pavardenis
-console.log(pilnaFraze === kitaFraze);// true
-console.log(kitaFraze);
+// if (color === "red") {
+//   if (Number(model) > 2010) {
+//     alert("Buy");
+//   } else if (mileage < 50000) {
+//     alert("Buy");
+//   } else {
+//     alert("Don't buy");
+//   }
+// } else {
+//   //no
+//   if (color === "yellow") {
+//     //yes
+//     if (make === ferrari) {
+//       alert("Buy");
+//     } else {
+//       alert("Don't buy");
+//     }
+//   } else {
+//     alert("Don't buy");
+//   }
+// }
 
-console.log(typeof ('1' + 2)); // 12 , pavercia 2 i string, nes skaiciaus stringe console nemato
-console.log(1 + '2' + 2); // 122
-console.log('6' - 2); // 4 , nes su stringais minusu nenaudojam, console vercia stringa i numeri
+//BMI task with if
 
-//TASK kiek liko iki paskaitos pradzios
+// const svoris = Number(prompt("Koks tavo svoris?kg"));
+// const ugisKv = Number(prompt("Koks tavo ugis?cm"))**2;
 
-const pradzia = 18;
-const valandos = Number(prompt("Kiek dabar valandu?")); //pvz 4
-const minutes = Number(prompt("Kiek dabar minuciu?")); //pvz 0
+// const kmi = svoris / ugisKv;
 
-let minuciuTikrinimas = minutes > 0; // false, siuo atveju atima 1 valanda
-let valandosKeitimas = Number(minuciuTikrinimas); // 0
-let skirtumasValandu = valandos + valandosKeitimas;
-let likutisValandu = pradzia - skirtumasValandu;
+// if (kmi < 18.5) {
+//     alert("Underweight");
+// }
+// else if (kmi < 25) {
+//     alert("Normal");
+// }
+// else if (kmi < 30) {
+//     alert("Overweight");
+// }
+// else if (kmi < 40) {
+//     alert("Obesity");
+// }
+// else {
+//     alert("Extreme obesity");
+// }
 
-let likutisMinuciu = (60 - minutes) * valandosKeitimas;
+//TASK BMR
 
-/*jeigu valandos keitimas yra vienetas, mes rodome minuciu likuti,
-jei valandos keitimas yra 0, mes rodome  0 minuciu likuti*/
+// const gender = prompt("What is your gender? (male, female)");
+// const weight = Number(prompt("What is your weight? (kg)"));
+// const height = Number(prompt("What is your height? (cm)"));
+// const age = Number(prompt("What is your age? (years)"));
+// const activityLevel = Number(prompt("What is your body type? (0, 1, 2, 3)"));
 
-/*turime gauti skirtuma tarp minuciu,
-jeigu mes atimam minutes, valanda turi sumazeti -1  */
+// let bmr
 
-alert(`Iki paskaitos liko ${likutisValandu} val. ir ${likutisMinuciu} min.`);
+// if (gender === "vyras") {
+//     bmr = (66.5 + (13.75 * weight) + (5.003 + height) - (6.75 * age))
+//     console.log("vyras")
+// }
+// else {
+//     bmr = (655.1 + (9.563 * weight) + (1.850 + height) - (4.676 * age))
+//     console.log("moteris")
+// }
 
-//SAME TASK bet kitaip parasyta ir papildyta
+// console.log(bmr);
 
-const currentHours = Number(prompt("Kiek dabar valandu?"));
-const currentMinutes = Number(prompt("Kiek dabar minuciu?"));
+// if (activityLevel === 0) {
+//     alert(bmr * 1.2)
+// }
+// else if (activityLevel === 1) {
+//     alert(bmr * 1.375)
+// }
+// else if (activityLevel === 2) {
+//     alert(bmr * 1.55)
+// }
+// else if (activityLevel === 3) {
+//     alert(bmr * 1.725)
+// }
+// else (activityLevel === 1) {
+//     alert(bmr * 1.9)
+// }
 
-const shouldReduceHour = currentMinutes > 0;
+//TASK project development
 
-const additionalHour = Number(shouldReduceHour);
+// const budget = prompt("Definite budget? yes no", "yes");
+// const champion = prompt("Whown champion for it? yes no", "yes");
+// const funding = prompt("Alternative funding? yes no", "yes");
+// const scope = prompt("Clear project scope?", "yes");
+// const profit = prompt("Happy to profit? yes no", "yes");
+// const timeScale = prompt("Achievable timescale? yes no", "yes");
 
-const isNotTooLate = Number(currentHours < 18);
+// console.log("budget: " + budget);
 
-const hourDifference = (18 - currentHours - additionalHour) * isNotTooLate;
-const minuteDifference = ((60 - currentMinutes) * additionalHour) * isNotTooLate;
+// if (budget === "yes") {
+//     if (champion === "yes") {
+//         if (scope === "yes") {
+//             if (timeScale === "yes") {
+//                 alert("Go for it");
+//             }
+//             else {
+//                 alert("Get more time");
+//             }
+//         }
+//         else {
+            
+//         }
+//     }
+//     else {
+//         alert("Leave it alone");
+//     }
+// }
+// else if (funding === "yes") {
+//     alert("Sort out funding");
+// }
+// else {
+//     alert("Leave it alone")
+// }
 
-alert(`Liko ${hourDifference} val. ir ${minuteDifference} min.`);
+const budget = prompt("Definite budget? yes no", "yes");
 
-
-
-console.log("A", "" + 1 + 0); //10
-console.log("B", "" - 1 + 0); //-1
-console.log("C", true + false); //1
-console.log("D", 6 / "3"); //2
-console.log("E", "2" * "3"); //6
-console.log("F", 4 + 5 + "px"); //9px
-console.log("G", "$" + 4 + 5); //$45
-console.log("H", "4" - 2); //2
-console.log("I", "4px" - 2); //NaN
-console.log("J", "  -9  " + 5); //  -9  5
-console.log("K", "  -9  " - 5); //-14
-console.log("L", null +1); //1
-console.log("M", undefined + 1); // NaN
+if (budget === "yes") {
+    const champion = prompt("Whown champion for it? yes no", "yes");
+    if (champion === "yes") {
+        const scope = prompt("Clear project scope?", "yes");
+        if (scope === "yes") {
+            const timeScale = prompt("Achievable timescale? yes no", "yes");
+            if (timeScale === "yes") {
+                alert("Go for it");
+            }
+            else {
+                alert("Get more time");
+            }
+        }
+        else {
+            const profit = prompt("Happy to profit? yes no", "yes");
+            if(profit === "yes") {
+                alert("Cash in");
+            } else {
+                alert("Explain why it matters");
+            }
+        }
+    }
+    else {
+        alert("Leave it alone");
+    }
+} else {
+    const funding = prompt("Alternative funding? yes no", "yes");
+    if (funding === "yes") {
+        alert("Sort out funding");
+    }
+    else {
+        alert("Leave it alone")
+    }
+}
