@@ -1,0 +1,27 @@
+#dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: grey;
+    top: calc(100% + 10px);
+    left: 0;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+
+
+.accordeon-content {
+    display: block;
+}
+
+.accordeon-content.hidden {
+    display: none;
+}

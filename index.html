@@ -6,15 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JavaScript</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="style.css" />
   <script src="scripts.js" defer></script>
 </head>
 
 <body>
+  <div id="some-element">Hello</div>
 
+
+  <div id="my-element">
+    <h1>My Element</h1>
+    <p>SOme text</p>
+  </div>
+
+
+  <button id="my-button" onclick="myFunction()">Click me</button>
+
+
+  <div id="dropdown">
+    <button id="my-button" onclick="toggle()">Click me</button>
+    <div class="dropdown-menu active">My dropdown</div>
+  </div>
+  
+
+  <div id="accordeon" class="accordeon-item">
+      <div class="accordeon-header" ><span onclick="dropdownText()">Question</span></div>
+      <div class="accordeon-content hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique dolore voluptatem laboriosam commodi ab corrupti alias illum aperiam suscipit veniam voluptatibus laborum, nisi mollitia, possimus quaerat pariatur repellendus porro.</div>
+  </div>
 </body>
 
 </html>
