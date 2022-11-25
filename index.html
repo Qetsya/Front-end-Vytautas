@@ -12,28 +12,35 @@
 </head>
 
 <body>
-  <div id="some-element">Hello</div>
+  <!-- TASK dark, light  -->
+  <p class="text">Tekstas</p>
+  <button onclick="changeMode()">Mode</button>
 
-
-  <div id="my-element">
-    <h1>My Element</h1>
-    <p>SOme text</p>
+  <!-- TASK input, button -->
+  <div>
+    <input id="tips" type="text">
+    <button onclick="calculate()">Skaiciuoti</button>
+    <p id="answer"></p>
   </div>
 
 
-  <button id="my-button" onclick="myFunction()">Click me</button>
-
-
-  <div id="dropdown">
-    <button id="my-button" onclick="toggle()">Click me</button>
-    <div class="dropdown-menu active">My dropdown</div>
+  <!-- TASK BMI -->
+  <h1>BMI calculator</h1>
+  <div>
+    <label for="height">Your height (cm)</label>
+    <input type="text" id="height" name="height">
+    <span id="height-error"></span>
   </div>
-  
 
-  <div id="accordeon" class="accordeon-item">
-      <div class="accordeon-header" ><span onclick="dropdownText()">Question</span></div>
-      <div class="accordeon-content hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique dolore voluptatem laboriosam commodi ab corrupti alias illum aperiam suscipit veniam voluptatibus laborum, nisi mollitia, possimus quaerat pariatur repellendus porro.</div>
+  <div>
+    <label for="weight">Your weight (kg)</label>
+    <input type="text" id="weight" name="weight">
+    <span id="weight-error"></span>
   </div>
+
+  <button type="button" onclick="calculateBMI()">Calculate</button>
+
+  <p id="result"></p>
 </body>
 
 </html>

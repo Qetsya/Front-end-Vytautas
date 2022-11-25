@@ -1,73 +1,101 @@
-const cssSelector = "#some-element";
-const element = document.querySelector(cssSelector);
+// console.log - debugging
 
-element.className = "element-style";
-element.className += " other-style"
-console.log(element.className);
+// kintamieji
+// let ir const deklaravimas
 
-const heading = document.querySelector("#my-element h1");//heading objektas
-const paragraph = document.querySelector("#my-element p");
+// naršyklės funkcijos
+// prompt, alert
 
-console.log(heading, paragraph);
+// duomenų tipai
+// string, number, boolean, null, undefined
+// tipų tikrinimas typeof
 
-//heading.className stringas su klasem
-//heading.innerText stringas su tekstu tarp elementu
-heading.innerText = "Labas vakaras"; //innerText objekto kintamasis
+// operatoriai
+// ===, +, -, *, /, >, <, **, !==, >=, <=, %
 
-console.log(heading.innerText);
+// if () {},  else if () {}, else {}
 
+// function () {}
 
-if (true) {
-    console.log("true");
-}
-//deklaracija
-function myFunction() {
-    console.log("labas");
-}
-console.log("1");
-//panaudojimas
-myFunction();
+// funkcija pasiimti elementą
+// const element = document.querySelector(".query")
 
-console.log("2");
+// elemento parametrai
+// element.innerText
+// element.className
 
 
-//TASK button show clicks
-const button = document.querySelector("#my-button");
-let i = 0;
+// TASK dark, light 
+const lightMode = "light";
+const darkMode = "dark";
 
-function myFunction() {
-    i++;
-    button.innerText = i;
-}
+const mode = document.querySelector("body");
 
-// TASK DOPDOWN
-const DROPDOWN_ACTIVE = "dropdown-menu active";
-const DROPDOWN_HIDDEN = "dropdown-menu";
-
-const dropdownElement = document.querySelector("#dropdown .dropdown-menu");
-
-function toggle() {
-
-    if (dropdownElement.className === DROPDOWN_ACTIVE) {
-        dropdownElement.className = DROPDOWN_HIDDEN;
+function changeMode() {
+    const modeLight = mode.className === lightMode;
+    if (modeLight) {
+        mode.className = darkMode;
     } else {
-        dropdownElement.className = DROPDOWN_ACTIVE;
+        mode.className = lightMode;
     }
 }
 
+// TASK input, button
 
-// TASK Question
+const tips = document.querySelector("#tips");
+const answer = document.querySelector("#answer");
 
-const TEXT_ACTIVE = "accordeon-content"
-const TEXT_HIDDEN = "accordeon-content hidden";
+function calculate() {
+    const calculatedTips = Number(tips.value) * 0.18;
+    console.log(calculatedTips);
+    answer.innerText = "Atsakymas: " + calculatedTips;
+}
 
-const accordeonContent = document.querySelector("#accordeon .accordeon-content");
 
-function dropdownText() {
-    const isAccordeonContentHidden = accordeonContent.className === TEXT_HIDDEN
-    if (isAccordeonContentHidden) {
-        accordeonContent.className = TEXT_ACTIVE;
+//TASK BMI
+const heightInput = document.querySelector("#height");
+const weightInput = document.querySelector("#weight");
+
+const heightError = document.querySelector("#height-error");
+const weightError = document.querySelector("#weight-error");
+const result = document.querySelector("#result");
+
+function calculateBMI() {
+    cleanupResult();
+
+    const heightCm = Number(heightInput.value);
+    const weightKg = Number(weightInput.value);
+
+    const isHeightValid = heightCm > 0;
+    const isWeightValid = weightKg > 0;
+
+    if (isHeightValid) {
+        if (isWeightValid){
+            const BMI = (weightKg / heightCm / heightCm) * 10_000;
+            result.innerText = BMI;
+            heightInput.value = "";
+            weightInput.value = "";
+        } else {
+            showWeightError();
+        }
     } else {
-        accordeonContent.className = TEXT_HIDDEN;
+        showHeightError();
+        if(!isWeightValid) {
+            showWeightError();
+        }
     }
+}
+
+function cleanupResult() {
+    heightError.innerText = "";
+    weightError.innerText = "";
+    result.innerText = "";
+}
+
+function showHeightError() {
+    heightError.innerText = "Error";
+}
+
+function showWeightError() {
+    weightError.innerText = "Error";
 }

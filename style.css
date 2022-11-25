@@ -1,27 +1,26 @@
-#dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    position: absolute;
-    background-color: grey;
-    top: calc(100% + 10px);
-    left: 0;
-    border-radius: 5px;
-    padding: 10px;
-    display: none;
-}
-
-.dropdown-menu.active {
-    display: block;
+html {
+    height: 100vh;
 }
 
 
-
-.accordeon-content {
-    display: block;
+/* TASK dark, light  */
+body.light {
+    --color: #000;
+    --bgColor: #fff;
 }
 
-.accordeon-content.hidden {
-    display: none;
+body.dark {
+    --color: #fff;
+    --bgColor: #000;
+}
+
+body {
+    color: var(--color);
+    background-color: var(--bgColor);
+}
+
+/* TASK BMI */
+#height-error,
+#weight-error {
+    color: red;
 }
