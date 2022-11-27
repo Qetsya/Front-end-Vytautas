@@ -16,20 +16,15 @@
   <p class="text">Tekstas</p>
   <button onclick="changeMode()">Mode</button>
 
-  <!-- TASK input, button -->
-  <div>
-    <input id="tips" type="text">
-    <button onclick="calculate()">Skaiciuoti</button>
-    <p id="answer"></p>
-  </div>
-
-
   <!-- TASK BMI -->
-  <h1>BMI calculator</h1>
+  <h1>BMR calculator</h1>
+
   <div>
-    <label for="height">Your height (cm)</label>
-    <input type="text" id="height" name="height">
-    <span id="height-error"></span>
+    <label for="woman">Woman</label>
+    <input type="radio" id="gender" class="woman" name="gender">
+
+    <label for="man">Man</label>
+    <input type="radio" id="gender" class="man" name="gender">
   </div>
 
   <div>
@@ -38,7 +33,19 @@
     <span id="weight-error"></span>
   </div>
 
-  <button type="button" onclick="calculateBMI()">Calculate</button>
+  <div>
+    <label for="height">Your height (cm)</label>
+    <input type="text" id="height" name="height">
+    <span id="height-error"></span>
+  </div>
+
+  <div>
+    <label for="age">Your age (years)</label>
+    <input type="text" id="age" name="age">
+    <span id="age-error"></span>
+  </div>
+
+  <button type="button" onclick="calculateBMR()">Calculate</button>
 
   <p id="result"></p>
 </body>

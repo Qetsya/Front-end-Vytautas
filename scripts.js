@@ -24,78 +24,103 @@
 // element.innerText
 // element.className
 
-
-// TASK dark, light 
+// TASK dark, light
 const lightMode = "light";
 const darkMode = "dark";
 
 const mode = document.querySelector("body");
 
 function changeMode() {
-    const modeLight = mode.className === lightMode;
-    if (modeLight) {
-        mode.className = darkMode;
-    } else {
-        mode.className = lightMode;
-    }
+  const modeLight = mode.className === lightMode;
+  if (modeLight) {
+    mode.className = darkMode;
+  } else {
+    mode.className = lightMode;
+  }
 }
 
-// TASK input, button
+// TASK BMR calculator
+const woman = document.querySelector(".woman");
+const man = document.querySelector(".man");
+const weight = document.querySelector("#weight");
+const height = document.querySelector("#height");
+const age = document.querySelector("#age");
 
-const tips = document.querySelector("#tips");
-const answer = document.querySelector("#answer");
-
-function calculate() {
-    const calculatedTips = Number(tips.value) * 0.18;
-    console.log(calculatedTips);
-    answer.innerText = "Atsakymas: " + calculatedTips;
-}
-
-
-//TASK BMI
-const heightInput = document.querySelector("#height");
-const weightInput = document.querySelector("#weight");
-
-const heightError = document.querySelector("#height-error");
 const weightError = document.querySelector("#weight-error");
-const result = document.querySelector("#result");
+const heightError = document.querySelector("#height-error");
+const ageError = document.querySelector("#age-error");
 
-function calculateBMI() {
-    cleanupResult();
+function calculateBMR() {
+  const weightKg = Number(weight.value);
+  const heightCm = Number(height.value);
+  const ageY = Number(age.value);
 
-    const heightCm = Number(heightInput.value);
-    const weightKg = Number(weightInput.value);
+  const isWeightValid = weightKg > 0;
+  const isHeightValid = heightCm > 0;
+  const isAgeValid = ageY > 0;
 
-    const isHeightValid = heightCm > 0;
-    const isWeightValid = weightKg > 0;
+  const BMRMan = 66.5 + 13.75 * weightKg + 5.003 * heightCm - 6.75 * ageY;
+  const BMRWoman = 655.1 + 9.563 * weightKg + 1.85 * heightCm - 4.676 * ageY;
 
+  if (isWeightValid) {
     if (isHeightValid) {
-        if (isWeightValid){
-            const BMI = (weightKg / heightCm / heightCm) * 10_000;
-            result.innerText = BMI;
-            heightInput.value = "";
-            weightInput.value = "";
+      if (isAgeValid) {
+        if (man.checked === true) {
+          result.innerText = "Your BMR is: " + BMRMan;
+          cleanup();
+        } else if (woman.checked === true) {
+          result.innerText = "Your BMR is: " + BMRWoman;
+          cleanup();
         } else {
-            showWeightError();
-        }
+            result.innerText = "Error";
+          }
+      } else {
+        showAgeError();
+      }
     } else {
         showHeightError();
-        if(!isWeightValid) {
-            showWeightError();
+    }
+  } else {
+    showWeightError();
+    if(!isHeightValid) {
+        showHeightError();
+        if(!isAgeValid) {
+            showAgeError();
         }
     }
+  }
 }
 
-function cleanupResult() {
-    heightError.innerText = "";
-    weightError.innerText = "";
-    result.innerText = "";
-}
+//     if (man.checked === true) {
+//         if (isWeightValid) {
+//         result.innerText = "Your BMR is: " + BMRMan;
+//         cleanup ();
+//         } else {
+//             weightError ();
+//         }
 
-function showHeightError() {
-    heightError.innerText = "Error";
+//     } else if(woman.checked === true){
+//         result.innerText = "Your BMR is: " + BMRWoman;
+//         cleanup ();
+//     } else {
+//         result.innerText = "Error";
+//     }
+// }
+
+function cleanup() {
+  weight.value = "";
+  height.value = "";
+  age.value = "";
 }
 
 function showWeightError() {
-    weightError.innerText = "Error";
+  weightError.innerText = "Error";
+}
+
+function showHeightError() {
+  heightError.innerText = "Error";
+}
+
+function showAgeError() {
+  ageError.innerText = "Error";
 }
