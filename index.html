@@ -16,15 +16,22 @@
   <p class="text">Tekstas</p>
   <button onclick="changeMode()">Mode</button>
 
-  <!-- TASK BMI -->
+  <!-- TASK BMR -->
   <h1>BMR calculator</h1>
 
   <div>
-    <label for="woman">Woman</label>
-    <input type="radio" id="gender" class="woman" name="gender">
+    <p>Please select your gender</p>
+    <div class="gender">
+      <label for="gender-woman">Woman</label>
+      <input type="radio" id="gender-woman" name="gender">
+    </div>
 
-    <label for="man">Man</label>
-    <input type="radio" id="gender" class="man" name="gender">
+    <div class="gender">
+      <label for="gender-man">Man</label>
+      <input type="radio" id="gender-man" name="gender">
+    </div>
+
+    <span id="gender-error"></span>
   </div>
 
   <div>
@@ -45,7 +52,37 @@
     <span id="age-error"></span>
   </div>
 
-  <button type="button" onclick="calculateBMR()">Calculate</button>
+  <div>
+    <p>Please select your activity level</p>
+
+    <div class="activity-level">
+      <label for="activity-1">Little or no exercise</label>
+      <input type="radio" id="activity-1" name="activity-level" value="sedentary">
+    </div>
+
+    <div class="activity-level">
+      <label for="activity-2">1-3 days/week</label>
+      <input type="radio" id="activity-2" name="activity-level" value="light">
+    </div>
+
+    <div class="activity-level">
+      <label for="activity-3">3-5 days/week</label>
+      <input type="radio" id="activity-3" name="activity-level" value="moderately">
+    </div>
+
+    <div class="activity-level">
+      <label for="activity-4">6-7 days a week</label>
+      <input type="radio" id="activity-4" name="activity-level" value="very">
+    </div>
+
+    <div class="activity-level">
+      <label for="activity-5">Very hard exercise/sports & a physical job</label>
+      <input type="radio" id="activity-5" name="activity-level" value="extra">
+    </div>
+    <span id="activity-error"></span>
+  </div>
+
+  <button type="button" class="calc-button" onclick="calculateBMR()">Calculate</button>
 
   <p id="result"></p>
 </body>

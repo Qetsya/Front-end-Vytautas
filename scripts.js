@@ -40,8 +40,8 @@ function changeMode() {
 }
 
 // TASK BMR calculator
-const woman = document.querySelector(".woman");
-const man = document.querySelector(".man");
+const woman = document.querySelector("#gender-woman");
+const man = document.querySelector("#gender-man");
 const weight = document.querySelector("#weight");
 const height = document.querySelector("#height");
 const age = document.querySelector("#age");
@@ -51,6 +51,8 @@ const heightError = document.querySelector("#height-error");
 const ageError = document.querySelector("#age-error");
 
 function calculateBMR() {
+    cleanupError()
+
   const weightKg = Number(weight.value);
   const heightCm = Number(height.value);
   const ageY = Number(age.value);
@@ -58,60 +60,60 @@ function calculateBMR() {
   const isWeightValid = weightKg > 0;
   const isHeightValid = heightCm > 0;
   const isAgeValid = ageY > 0;
+  const isGenderValid = "man" === gender || "woman" === gender;
+  const isActivityValid = "sedentary" === activity || "light" === activity || "moderately" === activity || "very" === activity || "extra" === activity;
 
   const BMRMan = 66.5 + 13.75 * weightKg + 5.003 * heightCm - 6.75 * ageY;
   const BMRWoman = 655.1 + 9.563 * weightKg + 1.85 * heightCm - 4.676 * ageY;
 
-  if (isWeightValid) {
-    if (isHeightValid) {
-      if (isAgeValid) {
-        if (man.checked === true) {
-          result.innerText = "Your BMR is: " + BMRMan;
-          cleanup();
-        } else if (woman.checked === true) {
-          result.innerText = "Your BMR is: " + BMRWoman;
-          cleanup();
-        } else {
-            result.innerText = "Error";
-          }
-      } else {
-        showAgeError();
-      }
-    } else {
-        showHeightError();
-    }
-  } else {
-    showWeightError();
-    if(!isHeightValid) {
-        showHeightError();
-        if(!isAgeValid) {
-            showAgeError();
-        }
-    }
-  }
+
+//   if (isWeightValid && isHeightValid && isAgeValid) {
+//         if (man.checked === true) {
+//           result.innerText = "Your BMR is: " + BMRMan;
+//           cleanupInput();
+//         } else if (woman.checked === true) {
+//           result.innerText = "Your BMR is: " + BMRWoman;
+//           cleanupInput();
+//         } else {
+//             result.innerText = "Error";
+//         }
+//   } else {
+//     if(!isHeightValid) {
+//         showHeightError();
+//     }
+//     if(!isAgeValid) {
+//         showAgeError();
+//     }
+//     if(!isWeightValid) {
+//         showWeightError();
+//     }
+//   }
+// }
+const genderEl = document.querySelector("input[name='gender']:checked");
+let gender;
+
+if (genderEl) {
+    gender = genderEl.value;
 }
 
-//     if (man.checked === true) {
-//         if (isWeightValid) {
-//         result.innerText = "Your BMR is: " + BMRMan;
-//         cleanup ();
-//         } else {
-//             weightError ();
-//         }
+const activityEl = document.querySelector("input[name='activity-level']:checked");
+let activity;
 
-//     } else if(woman.checked === true){
-//         result.innerText = "Your BMR is: " + BMRWoman;
-//         cleanup ();
-//     } else {
-//         result.innerText = "Error";
-//     }
-// }
+if (activity-El) {
+    activity = activityEl.value;
+}
 
-function cleanup() {
+function cleanupInput() {
   weight.value = "";
   height.value = "";
   age.value = "";
 }
+
+function cleanupError() {
+    weightError.innerText = "";
+    heightError.innerText = "";
+    ageError.innerText = "";
+  }
 
 function showWeightError() {
   weightError.innerText = "Error";
