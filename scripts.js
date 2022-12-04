@@ -129,3 +129,5 @@ function showHeightError() {
 function showAgeError() {
   ageError.innerText = "Error";
 }
+
+

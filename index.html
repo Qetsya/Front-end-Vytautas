@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="style.css" />
   <script src="scripts.js" defer></script>
+  <script src="calculator.js" defer></script>
 </head>
 
 <body>
@@ -85,6 +86,36 @@
   <button type="button" class="calc-button" onclick="calculateBMR()">Calculate</button>
 
   <p id="result"></p>
+
+
+  <!-- CALCULATOR Task -->
+  <div class="container">
+    <p id="display" class="display"></p>
+    <div class="buttons">
+      <div class="numbers">
+        <button onclick="call1()">1</button>
+        <button onclick="call2()">2</button>
+        <button onclick="call3()">3</button>
+        <button onclick="call4()">4</button>
+        <button onclick="call5()">5</button>
+        <button onclick="call6()">6</button>
+        <button onclick="call7()">7</button>
+        <button onclick="call8()">8</button>
+        <button onclick="call9()">9</button>
+        <button onclick="call0()">0</button>
+      </div>
+
+      <div class="operators">
+        <button onclick="multiply()" id="multiply">x</button>
+        <button onclick="divide()">/</button>
+        <button onclick="add()">+</button>
+        <button onclick="substract()">-</button>
+        <button onclick="clearResult()">CLEAR</button>
+        <button onclick="calculateResult()">=</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
