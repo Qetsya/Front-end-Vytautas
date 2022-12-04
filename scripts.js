@@ -184,6 +184,7 @@ function call0() {
 }
 
 function saveValue() {
+  
   if (
     typeof temporaryValue === "number" &&
     typeof operationType !== "undefined"
@@ -242,12 +243,12 @@ function calculateResult() {
     result = temporaryValue - Number(displayElement.innerText);
   }
   displayElement.innerText = result;
-  let temporaryValue = undefined;
-  let operationType = undefined;
+  temporaryValue = undefined;
+  operationType = undefined;
 }
 
 function clearResult() {
   displayElement.innerText = "";
-  let temporaryValue = undefined;
-  let operationType = undefined;
+  temporaryValue = undefined;
+  operationType = undefined;
 }
