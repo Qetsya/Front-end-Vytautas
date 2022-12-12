@@ -1,133 +1,42 @@
-// console.log - debugging
+// TASK 1
+const selectElement = document.querySelector("#ice-cream");
 
-// kintamieji
-// let ir const deklaravimas
-
-// naršyklės funkcijos
-// prompt, alert
-
-// duomenų tipai
-// string, number, boolean, null, undefined
-// tipų tikrinimas typeof
-
-// operatoriai
-// ===, +, -, *, /, >, <, **, !==, >=, <=, %
-
-// if () {},  else if () {}, else {}
-
-// function () {}
-
-// funkcija pasiimti elementą
-// const element = document.querySelector(".query")
-
-// elemento parametrai
-// element.innerText
-// element.className
-
-// TASK dark, light
-const lightMode = "light";
-const darkMode = "dark";
-
-const mode = document.querySelector("body");
-
-function changeMode() {
-  const modeLight = mode.className === lightMode;
-  if (modeLight) {
-    mode.className = darkMode;
-  } else {
-    mode.className = lightMode;
-  }
+function selectListener(event) {
+  console.log("event", event);
+  console.log("event.target", event.target);
+  console.log("event.target.value", event.target.value);
+  console.log("selectElement", selectElement);
 }
 
-// TASK BMR calculator
-const woman = document.querySelector("#gender-woman");
-const man = document.querySelector("#gender-man");
-const weight = document.querySelector("#weight");
-const height = document.querySelector("#height");
-const age = document.querySelector("#age");
+selectElement.addEventListener("change", selectListener);
 
-const weightError = document.querySelector("#weight-error");
-const heightError = document.querySelector("#height-error");
-const ageError = document.querySelector("#age-error");
 
-function calculateBMR() {
-  cleanupError()
 
-  let gender;
-  let activity;
+window.addEventListener("resize", function (evt) {
+  console.log("resize");
+})
 
-  const genderEl = document.querySelector("input[name='gender']:checked");
-  if (genderEl) {
-    gender = genderEl.value;
-  }
 
-  const activityEl = document.querySelector("input[name='activity-level']:checked");
-  if (activityEl) {
-    activity = activityEl.value;
-  }
+// TASK 2
+const genderSelectElement = document.querySelector("#gender");
+const ageSelectElement = document.querySelector("#age");
+const changeLogElement = document.querySelector("#chenge-log");
 
-  const weightKg = Number(weight.value);
-  const heightCm = Number(height.value);
-  const ageY = Number(age.value);
+function changeListener(event) {
+  const changeElement = event.target;
+  console.log(changeElement);
 
-  const isWeightValid = weightKg > 0;
-  const isHeightValid = heightCm > 0;
-  const isAgeValid = ageY > 0;
-  const isGenderValid = "man" === gender || "woman" === gender;
-  const isActivityValid = "sedentary" === activity || "light" === activity || "moderately" === activity || "very" === activity || "extra" === activity;
-  const BMRMan = 66.5 + (13.75 * weightKg) + (5.003 * heightCm) - (6.75 * ageY);
-  const BMRWoman = 655.1 + (9.563 * weightKg) + (1.85 * heightCm) - (4.676 * ageY);
+  const selectName = event.target.name;
+  const selectValue = event.target.value;
 
-  console.log(`activity ${isActivityValid} , gender ${isGenderValid} gender ${gender}`);
-
-  if (isWeightValid && isHeightValid && isAgeValid && isActivityValid && isGenderValid) {
-    let finalBMRResult = BMRWoman;
-    if (gender === "man") {
-      finalBMRResult = BMRMan;
-    }
-    result.innerText = `Your BMR is: ${finalBMRResult} Kcal/Day`;
-
-  } else {
-    if (!isHeightValid) {
-      showHeightError();
-    }
-
-    if (!isAgeValid) {
-      showAgeError();
-    }
-
-    if (!isWeightValid) {
-      showWeightError();
-    }
-
-    if (!isActivityValid || !isGenderValid) {
-      result.innerText = `Activity or gender error`;
-    }
-  }
+  const text = `User has changed ${selectName} select with a value ${selectValue}`;
+  changeLogElement.innerText += "\n" + text;
 }
 
-function cleanupInput() {
-  weight.value = "";
-  height.value = "";
-  age.value = "";
-}
+ageSelectElement.addEventListener("change", changeListener);
+genderSelectElement.addEventListener("change", changeListener);
 
-function cleanupError() {
-  weightError.innerText = "";
-  heightError.innerText = "";
-  ageError.innerText = "";
-}
-
-function showWeightError() {
-  weightError.innerText = "Error";
-}
-
-function showHeightError() {
-  heightError.innerText = "Error";
-}
-
-function showAgeError() {
-  ageError.innerText = "Error";
-}
-
-
+// example
+document.querySelector("#my-input").addEventListener("input", function (event) {
+  console.log(event.target.value);
+})
