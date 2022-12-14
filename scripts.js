@@ -1,42 +1,43 @@
-// TASK 1
-const selectElement = document.querySelector("#ice-cream");
+// TODO task
+const inputEl = document.querySelector("#todo-input");
+const btnEl = document.querySelector("#todo-btn");
+const todoListEl = document.querySelector("#todo-list");
 
-function selectListener(event) {
-  console.log("event", event);
-  console.log("event.target", event.target);
-  console.log("event.target.value", event.target.value);
-  console.log("selectElement", selectElement);
+function removeTodo(elementToDelete) {
+  todoListEl.removeChild(elementToDelete);
 }
 
-selectElement.addEventListener("change", selectListener);
+btnEl.addEventListener("click", function () {
+  const inputText = inputEl.value;
+  const todoEl = document.createElement("li");
+  todoEl.textContent = inputText;
+  inputEl.value = "";
 
+  todoListEl.append(todoEl);
 
-
-window.addEventListener("resize", function (evt) {
-  console.log("resize");
+  todoEl.addEventListener("click", function () {
+    removeTodo(todoEl);
+  })
 })
 
 
-// TASK 2
-const genderSelectElement = document.querySelector("#gender");
-const ageSelectElement = document.querySelector("#age");
-const changeLogElement = document.querySelector("#chenge-log");
-
-function changeListener(event) {
-  const changeElement = event.target;
-  console.log(changeElement);
-
-  const selectName = event.target.name;
-  const selectValue = event.target.value;
-
-  const text = `User has changed ${selectName} select with a value ${selectValue}`;
-  changeLogElement.innerText += "\n" + text;
+// function as VARIABLE. calling function in function
+function myFunction() {
+  console.log("myFunction");
 }
 
-ageSelectElement.addEventListener("change", changeListener);
-genderSelectElement.addEventListener("change", changeListener);
+const anotherFunction = myFunction;
+anotherFunction();
 
-// example
-document.querySelector("#my-input").addEventListener("input", function (event) {
-  console.log(event.target.value);
-})
+const anonymousFunctionInVariable = function () {
+  console.log("function");
+}
+anonymousFunctionInVariable();
+
+function callOtherFunction(otherFunction) {
+  return otherFunction;
+}
+
+const returnFunction = callOtherFunction(myFunction);
+returnedFunction(); //????
+

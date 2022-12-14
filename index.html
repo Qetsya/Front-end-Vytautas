@@ -9,60 +9,15 @@
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="style.css" />
   <script src="scripts.js" defer></script>
-  <script src="task.js" defer></script>
+  <script src="todo-list.js" defer></script>
 </head>
 
 <body>
-
-  <!-- TASK 1 -->
-  <select id="ice-cream" name="ice-cream">
-    <option value="">Select One …</option>
-    <option value="chocolate">Chocolate</option>
-    <option value="sardine">Sardine</option>
-    <option value="vanilla">Vanilla</option>
-  </select>
-
-  <!-- TASK 2 -->
-  <select name="gender" id="gender">
-    <option value="">Choose your gender</option>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-  </select>
-
-  <select name="age" id="age">
-    <option value="">Chosoe your age</option>
-    <option value="young">Young</option>
-    <option value="adult">Adult</option>
-    <option value="old">Old</option>
-  </select>
-
-  <p id="chenge-log"></p>
-
-  <!-- example -->
-
-  <input id="my-input" type="text">
-
-  <!-- TASK3 -->
-  <div>
-    <div>
-      <label for="first-number">1st Number</label>
-      <input type="text" name="number" id="first-number">
-    </div>
-
-    <div>
-      <label for="second-number">2nd Number</label>
-      <input type="text" name="number" id="second-number">
-    </div>
-
-    <div>
-      <button type="button" id="multiply-btn">Multiply</button>
-      <button type="button" id="divide-btn">Divide</button>
-    </div>
-
-    <p>The result is:</p>
-    <span id="result"></span>
-  </div>
-
+  <!-- TODO task -->
+<h1>TODO list</h1>
+<input id="todo-input" type="text">
+<button id="todo-btn"></button>
+<ul id="todo-list"></ul>
 </body>
 
 </html>
