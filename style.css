@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: burlywood;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: brown;
+}
+
+#todo-btn {
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    border: none;
+    background-color: royalblue;
+}
+
+#done-button {
+    background-color: green;
+}
+
+#close-button {
+background-color: red;
+}
+
+#done-button,
+#close-button {
+    border: none;
+    color: wheat;
+}
