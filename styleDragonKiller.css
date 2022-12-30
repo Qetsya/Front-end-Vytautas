@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.health-bars,
+.cat-health-bar,
+.mouse-health-bar {
+    display: flex;
+}
+
+.cat-health-bar,
+.mouse-health-bar {
+    flex: 1;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.heroes {
+    display: flex;
+    height: 300px;
+}
+
+.heroes > * {
+    flex: 1;
+    align-self: center;
+    text-align: center;
+}
+
+.cat img,
+.hamster img {
+    width: 100%;
+}
+
+.vs-sign {
+    font-size: 100px;
+    color: red;
+    text-align: center;
+}
+
+.winner-cat,
+.winner-hamster {
+    display: none;
+    height: 300px;
+    text-align: center;
+}
+
+.winner-cat img,
+.winner-hamster img{
+    height: 100%;
+}
+
+.mouse-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#attack-btn,
+#defend-btn,
+#heal-btn {
+    padding: 5px 30px;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+#visible {
+    display: block;
+}
+
+.combat-log {
+    display: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.combat-log h3 {
+    font-weight: 700;
+}
+
+#combat-log li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+.combat-log p {
+    margin: 0;
+}
+

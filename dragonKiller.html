@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouse Killer</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="styleDragonKiller.css" />
+  <script src="./dragon-killer.js" defer></script>
+  <script src="./mouseKiller.js" defer></script>
+</head>
+
+<body>
+  <h1>Mouse Killer 3</h1>
+  <div class="health-bars">
+    <div class="cat-health-bar">
+      <h2>Cat</h2>
+      <p>Health: <span id="cat-health"></span></p>
+    </div>
+    <div class="mouse-health-bar">
+      <h2>Mouse</h2>
+      <p>Health: <span id="mouse-health"></span></p>
+    </div>
+  </div>
+
+  <div>
+      <div class="heroes">
+        <div class="cat">
+          <img src="./assets/images/bengal-cat-siberian-cat-sphynx-cat-somali-cat-siamese-cat-kitten-5b09d9b5ac5188001646fb30ae0c6a16.png" alt="cat">
+        </div>
+        <span class="vs-sign">VS</span>
+        <div class="hamster">
+          <img src="./assets/images/campbell-s-dwarf-hamster-rodent-golden-hamster-roborovski-hamster-djungarian-hamster-others-31c3138fe6f39d1521cfb7aea20c4092.png" alt="hamster">
+        </div>
+      </div>
+
+    <div class="winner-cat">
+      <img src="./assets/images/bengal-cat-siberian-cat-sphynx-cat-somali-cat-siamese-cat-kitten-5b09d9b5ac5188001646fb30ae0c6a16.png" alt="cat">
+    </div>
+    <div class="winner-hamster">
+      <img src="./assets/images/campbell-s-dwarf-hamster-rodent-golden-hamster-roborovski-hamster-djungarian-hamster-others-31c3138fe6f39d1521cfb7aea20c4092.png" alt="hamster">
+    </div>
+
+  </div>
+
+  <div class="mouse-actions">
+    <button id="attack-btn" type="button">Attack</button>
+    <button id="defend-btn" type="button">Defend</button>
+    <button id="heal-btn" type="button">Heal</button>
+  </div>
+
+  <div class="game-log">
+
+  </div>
+</body>
+
+</html>
