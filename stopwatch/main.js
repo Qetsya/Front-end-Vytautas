@@ -1,29 +1,15 @@
-// const stopBtn = document.querySelector("#stop-btn");
 
-// stopBtn.addEventListener("click", stop);
-
-// let time = 0;
-
-// function tick() {
-//     time++;
-//     console.log(time);
-// }
-
-// const currentInterval = setInterval(tick, 1000); //ms = 1sec yra 1000ms
-
-// function stop() {
-//     clearInterval(currentInterval);
-// }
-
-//start ir stop btn
 
 import timerState from "./state.js";
+import { getTimeFormat } from "./utility.js";
 
 const elements = {
     startButton: document.querySelector("#start-btn"),
     stopButton: document.querySelector("#stop-btn"),
     timerBox: document.querySelector("#timer"),
 };
+
+
 
 function updateTimerText(timeElapsed) {
     console.log("update", timeElapsed);
@@ -33,7 +19,7 @@ function updateTimerText(timeElapsed) {
     const minutes = Math.floor(timeElapsed / 60) % 60;
     const hours = Math.floor(Math.floor(timeElapsed / 60) / 60);
 
-    elements.timerBox.textContent = `${hours}:${minutes}:${seconds}`;
+    elements.timerBox.textContent = `${getTimeFormat(hours)}:${getTimeFormat(minutes)}:${getTimeFormat(seconds)}`;
 
     console.log(hours, minutes, seconds);
 }
